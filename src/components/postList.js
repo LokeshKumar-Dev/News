@@ -137,9 +137,6 @@ class PostList extends Component{
   };
 
   render(){
-    console.log('===============POSTLIST=============');
-    console.log('render');
-    console.log(this.props.posts);
 
     return(
       <>
@@ -151,7 +148,6 @@ class PostList extends Component{
 }
 
 const mapStateToProps = state => {
-  console.log('mapStateToProps');
   return ({ posts:state.weather });
 };
 

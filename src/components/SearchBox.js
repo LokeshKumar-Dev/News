@@ -16,7 +16,6 @@ class SearchBox extends Component{
   }
 
   componentDidMount(){
-    console.log('cdm geo');
     navigator.geolocation.getCurrentPosition(
       position => this.onGeolocation(position),
       err => alert("ALLOW 'LOCATION' FOR GREATER EXPERIANCE!")
@@ -25,7 +24,6 @@ class SearchBox extends Component{
 
   onGeolocation = (event) => {
     const {latitude ,longitude} = event.coords;
-    console.log(latitude ,longitude);
     this.props.fetchWeatherCoords(latitude, longitude);
   };
 
