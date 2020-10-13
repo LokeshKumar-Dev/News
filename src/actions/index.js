@@ -1,13 +1,6 @@
-import openweathermap from '../apis/openweathermap';
+import newsApi from '../apis/newsApi';
 
-export const fetchWeather = (searchValue) => async dispatch => {
-  await openweathermap.get(`/weather?q=${searchValue}&appid=9af1d53ab396d07e060362a1b6c5c8cb`)
-  .then(response => dispatch({type:'FETCH_WEATHER_SEARCH',payload:response.data}))
-  .catch(err => alert('WRONG INPUT,CHECK YOUR SEARCH VALUE'))
-
-};
-
-export const fetchWeatherCoords = (lat ,long) => async dispatch => {
-  const response = await openweathermap.get(`/weather?lat=${lat}&lon=${long}&appid=9af1d53ab396d07e060362a1b6c5c8cb`);
-  dispatch({type:'FETCH_WEATHER_COORDS',payload:response.data});
-};
+export const FetchNews = (country, category) => async dispatch => {
+  const news = await newsApi.get(`?country=${country}&category=${category}&apiKey=33634c3d649745ab9599c95b7176de62`)
+  dispatch({type:'FETCH_HEADLINES', payload:news.data })
+}

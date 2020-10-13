@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import postWeather from './postWeather';
+import postNews from './postNews';
  
 export default combineReducers({
-  weather:postWeather
+  news : postNews
 });

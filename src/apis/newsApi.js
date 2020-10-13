@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL:'https://api.openweathermap.org/data/2.5'
+  baseURL:'https://newsapi.org/v2/top-headlines'
 });

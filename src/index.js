@@ -7,17 +7,12 @@ import thunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
-import './css/style.css'
-
 class Index extends Component{
   render(){
     return(
-      <div className="widget">
-        <div className="wra">
-          <h1>What's Weather!</h1>
+      <>
           <App />
-        </div>
-      </div>
+      </>
     );
   }
 }
